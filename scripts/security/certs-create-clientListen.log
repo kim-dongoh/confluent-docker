@@ -1,0 +1,11 @@
+Signature ok
+subject=C = US, ST = Ca, L = PaloAlto, O = CONFLUENT, OU = TEST, CN = clientListen
+Getting CA Private Key
+Certificate was added to keystore
+Certificate reply was installed in keystore
+Certificate was added to keystore
+Certificate stored in file <clientListen.der>
+Importing keystore kafka.clientListen.keystore.jks to clientListen.keystore.p12...
+Entry for alias clientlisten successfully imported.
+Entry for alias snakeoil-caroot successfully imported.
+Import command completed:  2 entries successfully imported, 0 entries failed or cancelled

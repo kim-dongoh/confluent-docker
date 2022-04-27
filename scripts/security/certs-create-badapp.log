@@ -1,0 +1,11 @@
+Signature ok
+subject=C = US, ST = Ca, L = PaloAlto, O = CONFLUENT, OU = TEST, CN = badapp
+Getting CA Private Key
+Certificate was added to keystore
+Certificate reply was installed in keystore
+Certificate was added to keystore
+Certificate stored in file <badapp.der>
+Importing keystore kafka.badapp.keystore.jks to badapp.keystore.p12...
+Entry for alias badapp successfully imported.
+Entry for alias snakeoil-caroot successfully imported.
+Import command completed:  2 entries successfully imported, 0 entries failed or cancelled

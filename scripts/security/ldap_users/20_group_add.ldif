@@ -26,21 +26,6 @@ memberuid: cn=superUser,ou=users,{{ LDAP_BASE_DN }}
 dn: cn=KafkaDevelopers,ou=groups,{{ LDAP_BASE_DN }}
 changetype: modify
 add: memberuid
-memberuid: cn=connectAdmin,ou=users,{{ LDAP_BASE_DN }}
-
-dn: cn=KafkaDevelopers,ou=groups,{{ LDAP_BASE_DN }}
-changetype: modify
-add: memberuid
-memberuid: cn=connectorSA,ou=users,{{ LDAP_BASE_DN }}
-
-dn: cn=KafkaDevelopers,ou=groups,{{ LDAP_BASE_DN }}
-changetype: modify
-add: memberuid
-memberuid: cn=connectorSubmitter,ou=users,{{ LDAP_BASE_DN }}
-
-dn: cn=KafkaDevelopers,ou=groups,{{ LDAP_BASE_DN }}
-changetype: modify
-add: memberuid
 memberuid: cn=schemaregistryUser,ou=users,{{ LDAP_BASE_DN }}
 
 dn: cn=KafkaDevelopers,ou=groups,{{ LDAP_BASE_DN }}

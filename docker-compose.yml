@@ -388,9 +388,9 @@ services:
 
       # ksqlDB
       # Communication between Control Center and ksqlDB Docker containers
-      CONTROL_CENTER_KSQL_SERVER_URL: ${CONTROL_CENTER_KSQL_WIKIPEDIA_URL}
+      CONTROL_CENTER_KSQL_SERVER_URL: ${CONTROL_CENTER_KSQL_URL}
       # Communication from web browser running on localhost to ksqlDB
-      CONTROL_CENTER_KSQL_SERVER_ADVERTISED_URL: ${CONTROL_CENTER_KSQL_WIKIPEDIA_ADVERTISED_URL}
+      CONTROL_CENTER_KSQL_SERVER_ADVERTISED_URL: ${CONTROL_CENTER_KSQL_ADVERTISED_URL}
 
       # Schema Registry
       CONTROL_CENTER_SCHEMA_REGISTRY_SR1_URL: http://schemaregistry:8085

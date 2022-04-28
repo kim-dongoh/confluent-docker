@@ -14,7 +14,7 @@ ${DIR}/stop.sh
 
 # Regenerate certificates and the Connect or tools Docker image if any of the following conditions are true
 if [[ "$CLEAN" == "true" ]] || \
- ! [[ -f "${DIR}/security/controlCenterAndKsqlDBServer-ca1-signed.crt" ]] || \
+# ! [[ -f "${DIR}/security/controlCenterAndKsqlDBServer-ca1-signed.crt" ]] || \
 # ! [[ $(docker images --format "{{.Repository}}:{{.Tag}}" localbuild/connect:${CONFLUENT_DOCKER_TAG}-${CONNECTOR_VERSION}) =~ localbuild ]] || \
  ! [[ $(docker images --format "{{.Repository}}:{{.Tag}}" localbuild/tools:${CONFLUENT_DOCKER_TAG}) =~ localbuild ]] ;
 then

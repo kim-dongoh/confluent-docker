@@ -133,7 +133,6 @@ create_certificates()
   # Enable Docker appuser to read files when created by a different UID
   echo -e "Setting insecure permissions on some files in ${DIR}/../security for demo purposes\n"
   chmod 644 ${DIR}/../security/keypair/keypair.pem
-  chmod 644 ${DIR}/../security/*.key
 }
 
 build_tools_image()

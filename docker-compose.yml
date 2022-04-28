@@ -856,7 +856,7 @@ services:
       # For Demo purposes: improve resource utilization and avoid timeouts
       KSQL_KSQL_STREAMS_NUM_STREAM_THREADS: 1
 
-      KSQL_LOG4J_OPTS: "-Dlog4j.configuration=file:/tmp/helper/log4j-secure.properties"
+#      KSQL_LOG4J_OPTS: "-Dlog4j.configuration=file:/tmp/helper/log4j-secure.properties"
       KSQL_KSQL_LOGGING_PROCESSING_TOPIC_REPLICATION_FACTOR: 2
       KSQL_KSQL_LOGGING_PROCESSING_TOPIC_AUTO_CREATE: 'true'
       KSQL_KSQL_LOGGING_PROCESSING_STREAM_AUTO_CREATE: 'true'
@@ -925,17 +925,17 @@ services:
               password="ksqlDBAdmin" \
               metadataServerUrls="http://kafka1:8091,http://kafka2:8092";
 
-  ksqldb-cli:
-    image: ${REPOSITORY}/cp-ksqldb-cli:${CONFLUENT_DOCKER_TAG}
-    container_name: ksqldb-cli
-    depends_on:
-      ksqldb-server:
-        condition: service_healthy
-    volumes:
-      - ./scripts/ksqlDB/statements.sql:/tmp/statements.sql
-    entrypoint: /bin/sh
-    tty: true
-
+#  ksqldb-cli:
+#    image: ${REPOSITORY}/cp-ksqldb-cli:${CONFLUENT_DOCKER_TAG}
+#    container_name: ksqldb-cli
+#    depends_on:
+#      ksqldb-server:
+#        condition: service_healthy
+#    volumes:
+#      - ./scripts/ksqlDB/statements.sql:/tmp/statements.sql
+#    entrypoint: /bin/sh
+#    tty: true
+#
   restproxy:
     image: ${REPOSITORY}/cp-kafka-rest:${CONFLUENT_DOCKER_TAG}
     restart: always

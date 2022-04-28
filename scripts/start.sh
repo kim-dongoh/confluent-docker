@@ -148,7 +148,7 @@ echo
 #-------------------------------------------------------------------------------
 
 # Start more containers
-docker-compose up --no-recreate -d ksqldb-server ksqldb-cli restproxy
+docker-compose up --no-recreate -d ksqldb-server restproxy
 
 # Verify ksqlDB server has started
 echo

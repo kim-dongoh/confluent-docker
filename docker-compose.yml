@@ -31,6 +31,8 @@ services:
       KAFKA_OPTS: -Djava.security.auth.login.config=/etc/kafka/secrets/zookeeper_jaas.conf
     volumes:
       - ./scripts/security:/etc/kafka/secrets
+      - ./scripts/logs/zookeeper/data:/var/lib/zookeeper/data
+      - ./scripts/logs/zookeeper/log:/var/lib/zookeeper/log
 
   tools:
     image: localbuild/tools:${CONFLUENT_DOCKER_TAG}
@@ -77,6 +79,7 @@ services:
       - ./scripts/security/keypair:/tmp/conf
       - ./scripts/helper:/tmp/helper
       - ./scripts/security:/etc/kafka/secrets
+      - ./scripts/logs/kafka1/data:/var/lib/kafka/data
     ports:
       - 8091:8091
       - 9091:9091
@@ -215,6 +218,7 @@ services:
       - ./scripts/security/keypair:/tmp/conf
       - ./scripts/helper:/tmp/helper
       - ./scripts/security:/etc/kafka/secrets
+      - ./scripts/logs/kafka2/data:/var/lib/kafka/data
     ports:
       - 8092:8092
       - 9092:9092

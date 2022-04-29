@@ -34,6 +34,7 @@ echo
 
 if [[ "$CLEAN" == "true" ]] ; then
   create_certificates
+  create_directories
 fi
 
 #-------------------------------------------------------------------------------
@@ -120,7 +121,6 @@ curl -u mds:mds -X POST "http://localhost:8091/security/1.0/rbac/principals" --s
   -H "accept: application/json"  -H "Content-Type: application/json" \
   -d "{\"clusters\":{\"kafka-cluster\":\"does_not_matter\"}}" | jq '.[]'
 
-###################################################################################################################################################
 # Do poststart_checks
 poststart_checks
 

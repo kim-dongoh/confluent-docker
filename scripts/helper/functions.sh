@@ -138,17 +138,6 @@ host_check_up()
   return 1
 }
 
-################################
-host_check_schema_registered()
-{
-  FOUND=$(docker exec schemaregistry curl -s -X GET --cert /etc/kafka/secrets/schemaregistry.certificate.pem --key /etc/kafka/secrets/schemaregistry.key --tlsv1.2 --cacert /etc/kafka/secrets/snakeoil-ca-1.crt -u superUser:superUser https://schemaregistry:8085/subjects | grep "wikipedia.parsed-value")
-  if [ -z "$FOUND" ]; then
-    return 1
-  fi
-  return 0
-}
-#####################################
-
 mds_login()
 {
   MDS_URL=$1

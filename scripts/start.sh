@@ -34,7 +34,6 @@ echo
 
 if [[ "$CLEAN" == "true" ]] ; then
   create_certificates
-  create_directories
 fi
 
 #-------------------------------------------------------------------------------

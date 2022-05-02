@@ -47,17 +47,13 @@ preflight_checks()
 
   # Verify Docker memory is at least 8 GB
   if [[ $(docker system info --format '{{.MemTotal}}') -lt 8000000000 ]]; then
-    echo -e "\nWARNING: Memory available to Docker should be at least 8 GB (default is 2 GB), otherwise cp-demo may not work properly.\n"
-    if [[ "$VIZ" == "true" ]]; then
-      echo -e "ERROR: Cannot proceed with Docker memory less than 8 GB when 'VIZ=true' (enables Elasticsearch and Kibana).  Either increase memory available to Docker or restart cp-demo with 'VIZ=false' (see https://docs.confluent.io/platform/current/tutorials/cp-demo/docs/index.html#start)\n"
-      exit 1
-    fi
+    echo -e "\nWARNING: Memory available to Docker should be at least 8 GB. (default is 2 GB)\n"
     sleep 3
   fi
 
   # Verify Docker CPU cores is increased to at least 2
   if [[ $(docker system info --format '{{.NCPU}}') -lt 2 ]]; then
-    echo -e "\nWARNING: Number of CPU cores available to Docker must be at least 2, otherwise cp-demo may not work properly.\n"
+    echo -e "\nWARNING: Number of CPU cores available to Docker must be at least 2.\n"
     sleep 3
   fi
 

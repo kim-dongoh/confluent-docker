@@ -10,15 +10,3 @@ docker-compose down --volumes
 (cd "${DIR}/logs/kafka1/data/" && rm -rf *)
 (cd "${DIR}/logs/zookeeper/data/" && rm -rf *)
 (cd "${DIR}/logs/zookeeper/log/" && rm -rf *)
-
-cat << EOF
-
------------------------------------------------------------------------------------------------------------
-If you ran the Hybrid Cloud portion of this tutorial, which included creating resources in Confluent Cloud,
-follow the clean up procedure to destroy those resources to avoid unexpected charges.
-
-     https://docs.confluent.io/platform/current/tutorials/cp-demo/docs/teardown.html
-
------------------------------------------------------------------------------------------------------------
-
-EOF
